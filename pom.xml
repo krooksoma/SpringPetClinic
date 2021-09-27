@@ -20,6 +20,7 @@
 	<scm>
 		<url>https://github.com/krooksoma/SpringPetClinic</url>
 		<connection>scm:git:git@github.com:krooksoma/SpringPetClinic.git</connection>
+		<developerConnection>scm:git:git@github.com:krooksoma/SpringPetClinic.git</developerConnection>
 		<tag>SpringPetClinic-0.0.1</tag>
 	</scm>
 
