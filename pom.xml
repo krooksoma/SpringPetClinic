@@ -4,7 +4,7 @@
 	<packaging>pom</packaging>
 	<scm>
 		<developerConnection>scm:git:[git@github.com:krooksoma/SpringPetClinic.git]</developerConnection>
-		<tag>SpringPetClinic-0.0.2</tag>
+		<tag>SpringPetClinic-0.0.1</tag>
 	</scm>
 	<modules>
 		<module>pet-clinic-data</module>
