@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
 	<scm>
-		<developerConnection>scm:git:[git@github.com:krooksoma/SpringPetClinic.git]</developerConnection>
+		<developerConnection>scm:git:[https://github.com/krooksoma/SpringPetClinic.git]</developerConnection>
 		<tag>SpringPetClinic-0.0.1</tag>
 	</scm>
 	<modules>
