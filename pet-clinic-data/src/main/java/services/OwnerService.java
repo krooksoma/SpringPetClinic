@@ -5,16 +5,6 @@ import model.PetOwner;
 
 import java.util.Set;
 
-public interface OwnerService {
+public interface OwnerService extends CrudService<PetOwner, Long>{
     PetOwner findByLastName(String lastName);
-
-    PetOwner findByID(Long id);
-
-    PetOwner save(PetOwner petOwner);
-
-    Set<PetOwner> findAll();
-
-
-
-
 }
