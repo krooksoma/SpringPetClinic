@@ -1,5 +1,14 @@
 model\PetType.class
-model\Veterinarian.class
-model\Pet.class
-model\PetOwner.class
+services\map\VeterinarianServiceMap.class
+services\CrudService.class
+services\VeterinarianService.class
+model\BaseEntity.class
+services\PetService.class
 model\Person.class
+model\Veterinarian.class
+services\OwnerService.class
+services\map\OwnerServiceMap.class
+services\map\PetServiceMap.class
+model\Pet.class
+services\map\AbstractMapService.class
+model\PetOwner.class
