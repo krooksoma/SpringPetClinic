@@ -3,7 +3,7 @@
     <parent>
         <artifactId>SpringPetClinic</artifactId>
         <groupId>com</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,7 +18,7 @@
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>com</groupId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,4 +45,8 @@
         </dependency>
     </dependencies>
 
+
+  <scm>
+    <tag>SpringPetClinic-0.0.1</tag>
+  </scm>
 </project>
