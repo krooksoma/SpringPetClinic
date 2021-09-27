@@ -5,7 +5,7 @@
 
 	<groupId>com</groupId>
 	<artifactId>SpringPetClinic</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<modules>
 		<module>pet-clinic-data</module>
@@ -19,8 +19,8 @@
 
 	<scm>
 		<url>https://github.com/krooksoma/SpringPetClinic</url>
-		<connection>scm:git:[https://github.com/krooksoma/SpringPetClinic.git]</connection>
-		<tag>SpringPetClinic-0.0.1</tag>
+		<connection>scm:git:[git@github.com:krooksoma/SpringPetClinic.git]</connection>
+		<tag>SpringPetClinic-0.0.1-SNAPSHOT</tag>
 	</scm>
 
 	<parent>
