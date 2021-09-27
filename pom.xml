@@ -18,8 +18,9 @@
 	<description>Pet Clinic Project on Spring</description>
 
 	<scm>
+		<url>https://github.com/krooksoma/SpringPetClinic</url>
 		<connection>scm:git:[git@github.com:krooksoma/SpringPetClinic.git]</connection>
-		<tag>SpringPetClinic-0.0.1</tag>
+		<tag>SpringPetClinic-0.0.1-SNAPSHOT</tag>
 	</scm>
 
 	<parent>
