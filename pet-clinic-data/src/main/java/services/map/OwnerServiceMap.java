@@ -2,11 +2,12 @@ package services.map;
 
 import model.PetOwner;
 import services.CrudService;
+import services.OwnerService;
 import services.map.AbstractMapService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implements CrudService<PetOwner, Long> {
+public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implements OwnerService{
     @Override
     public PetOwner save(PetOwner object) {
         return super.save(object.getId(), object);
@@ -30,5 +31,10 @@ public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implemen
     @Override
     public void deleteById(Long id){
         super.deleteById(id);
+    }
+
+    @Override
+    public PetOwner findByLastName(String lastName) {
+        return null;
     }
 }

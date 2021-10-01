@@ -2,10 +2,11 @@ package services.map;
 
 import model.Veterinarian;
 import services.CrudService;
+import services.VeterinarianService;
 
 import java.util.Set;
 
-public class VeterinarianServiceMap extends AbstractMapService<Veterinarian, Long> implements CrudService<Veterinarian, Long> {
+public class VeterinarianServiceMap extends AbstractMapService<Veterinarian, Long> implements VeterinarianService {
     @Override
     public Set<Veterinarian> findAll() {
         return super.findAll();
