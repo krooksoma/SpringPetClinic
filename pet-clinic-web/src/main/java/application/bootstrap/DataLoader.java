@@ -52,12 +52,14 @@ public class DataLoader implements CommandLineRunner {
         Veterinarian veterinarian1 = new Veterinarian();
 
         veterinarian1.setId(2L);
-        veterinarian1.setFirstName("Silvia");
+        veterinarian1.setFirstName("Jonas");
         veterinarian1.setLastName("Smith");
 
         vetService.save(veterinarian1);
 
         System.out.println("-----------Loaded Veterinarians------------");
+
+
 
     }
 }
