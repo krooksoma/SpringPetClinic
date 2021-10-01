@@ -5,6 +5,23 @@
     <title>Veterinarians index</title>
 </head>
 <body>
+<!--/*@thymesVar id="veterinarian" type="petdata.model.Veterinarian"*/-->
 <h1 th:text="veterinarians">Vets index</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="veterinarian : ${veterinarians}">
+        <td th:text ="${veterinarian?.id}">id</td>
+        <td th:text ="${veterinarian?.firstName}">firstName</td>
+        <td th:text ="${veterinarian?.lastName}">lastName</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

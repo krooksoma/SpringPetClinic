@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xml:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Owners index</title>
+</head>
+<body>
+<!--/*@thymesVar id="owner" type="petdata.model.PetOwner"*/-->
+<h1>Pet Owners list</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner : ${owners}">
+        <td th:text ="${owner?.id}">id</td>
+        <td th:text ="${owner?.firstName}">firstName</td>
+        <td th:text ="${owner?.lastName}">lastName</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

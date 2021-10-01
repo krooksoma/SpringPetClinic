@@ -1,24 +1,24 @@
 package application.bootstrap;
 
-import model.PetOwner;
-import model.Veterinarian;
+import petdata.model.PetOwner;
+import petdata.model.Veterinarian;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import services.OwnerService;
-import services.VeterinarianService;
-import services.map.OwnerServiceMap;
-import services.map.VeterinarianServiceMap;
+import petdata.services.OwnerService;
+import petdata.services.VeterinarianService;
 
-//by making a class a component it is converted to a bean and it is part of the Spring Context
+
+//by making a class a component it is converted to a bean, and it is part of the Spring Context
 @Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VeterinarianService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VeterinarianServiceMap();
+
+    public DataLoader(OwnerService ownerService, VeterinarianService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
