@@ -1,33 +1,51 @@
 package petdata.services.map;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import petdata.model.BaseEntity;
 
-public abstract class AbstractMapService<Type, ID> {
+import java.util.*;
 
-    protected Map<ID, Type> map = new HashMap<>();
+public abstract class AbstractMapService<Type extends BaseEntity, ID extends Long> {
 
-    protected Set<Type> findAll(){
+    protected Map<Long, Type> map = new HashMap<>();
+
+    Set<Type> findAll(){
         return new HashSet<>(map.values());
     }
 
-    protected Type findById(ID id){
+    Type findById(ID id){
         return map.get(id);
     }
 
-    protected Type save(ID id, Type object){
-        map.put(id, object);
+    Type save(Type object){
+        if(object !=null ) {
+            if(object.getId() == null){
+                object.setId(getNextId());
+            }
+            map.put(object.getId(), object);
+        }else{
+            throw new RuntimeException("Object cannot be null");
+        }
         return object;
     }
 
-    protected void deleteById(ID id){
+    void deleteById(ID id){
         map.remove(id);
     }
 
-    protected void delete(Type object){
+    void delete(Type object){
         map.entrySet().removeIf(entry -> entry.getValue().equals(object));
     }
 
+    private Long getNextId(){
+
+        Long nextId = null;
+        try{
+            nextId = Collections.max(map.keySet()) + 1;
+
+        }catch(NoSuchElementException e){
+            nextId = 1L;
+        }
+
+        return nextId;
+    }
 }

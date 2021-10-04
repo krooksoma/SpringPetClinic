@@ -11,7 +11,7 @@ import java.util.Set;
 public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implements OwnerService{
     @Override
     public PetOwner save(PetOwner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

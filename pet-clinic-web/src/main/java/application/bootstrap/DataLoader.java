@@ -25,7 +25,6 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         PetOwner petOwner = new PetOwner();
 
-        petOwner.setId(1L);
         petOwner.setFirstName("Thomas");
         petOwner.setLastName("Moore");
 
@@ -33,7 +32,7 @@ public class DataLoader implements CommandLineRunner {
 
         PetOwner petOwner1 = new PetOwner();
 
-        petOwner1.setId(2L);
+
         petOwner1.setFirstName("Jim");
         petOwner1.setLastName("Beam");
 
@@ -43,7 +42,7 @@ public class DataLoader implements CommandLineRunner {
 
         Veterinarian veterinarian = new Veterinarian();
 
-        veterinarian.setId(1L);
+
         veterinarian.setFirstName("Jennifer");
         veterinarian.setLastName("Scary");
 
@@ -51,7 +50,7 @@ public class DataLoader implements CommandLineRunner {
 
         Veterinarian veterinarian1 = new Veterinarian();
 
-        veterinarian1.setId(2L);
+
         veterinarian1.setFirstName("Jonas");
         veterinarian1.setLastName("Smith");
 

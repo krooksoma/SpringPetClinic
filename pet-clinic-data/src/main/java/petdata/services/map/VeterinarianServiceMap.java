@@ -20,7 +20,7 @@ public class VeterinarianServiceMap extends AbstractMapService<Veterinarian, Lon
 
     @Override
     public Veterinarian save(Veterinarian object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
