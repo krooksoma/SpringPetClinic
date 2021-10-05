@@ -1,0 +1,14 @@
+petdata\services\map\AbstractMapService.class
+petdata\model\PetOwner.class
+petdata\services\OwnerService.class
+petdata\services\PetService.class
+petdata\services\VeterinarianService.class
+petdata\services\map\VeterinarianServiceMap.class
+petdata\model\BaseEntity.class
+petdata\services\map\OwnerServiceMap.class
+petdata\model\Pet.class
+petdata\model\Person.class
+petdata\model\PetType.class
+petdata\model\Veterinarian.class
+petdata\services\map\PetServiceMap.class
+petdata\services\CrudService.class
