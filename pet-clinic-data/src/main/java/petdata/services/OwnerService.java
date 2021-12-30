@@ -1,8 +1,8 @@
 package petdata.services;
 
 
-import petdata.model.PetOwner;
+import petdata.model.Owner;
 
-public interface OwnerService extends CrudService<PetOwner, Long>{
-    PetOwner findByLastName(String lastName);
+public interface OwnerService extends CrudService<Owner, Long>{
+    Owner findByLastName(String lastName);
 }

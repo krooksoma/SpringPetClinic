@@ -2,7 +2,7 @@ package petdata.services.map;
 
 import org.springframework.context.annotation.Profile;
 import petdata.model.Pet;
-import petdata.model.PetOwner;
+import petdata.model.Owner;
 import org.springframework.stereotype.Service;
 
 import petdata.services.OwnerService;
@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Service
 @Profile({"default", "map"})
-public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implements OwnerService{
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService{
     private final PetTypeService petTypeService;
     private final PetService petService;
 
@@ -23,7 +23,7 @@ public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implemen
     }
 
     @Override
-    public PetOwner save(PetOwner object) {
+    public Owner save(Owner object) {
         if(object != null){
             if(object.getPets() != null){
                 object.getPets().forEach(pet ->{
@@ -48,17 +48,17 @@ public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implemen
     }
 
     @Override
-    public Set<PetOwner> findAll(){
+    public Set<Owner> findAll(){
         return super.findAll();
     }
 
     @Override
-    public PetOwner findById(Long id){
+    public Owner findById(Long id){
         return super.findById(id);
     }
 
     @Override
-    public void delete(PetOwner object){
+    public void delete(Owner object){
         super.delete(object);
     }
 
@@ -68,7 +68,7 @@ public class OwnerServiceMap extends AbstractMapService<PetOwner, Long> implemen
     }
 
     @Override
-    public PetOwner findByLastName(String lastName) {
+    public Owner findByLastName(String lastName) {
         return null;
     }
 }

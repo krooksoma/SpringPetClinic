@@ -1,11 +1,25 @@
 package petdata.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name ="pets")
 public class Pet extends BaseEntity{
+
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne
+   @JoinColumn(name ="type_id")
     private PetType petType;
-    private PetOwner petOwner;
-    private String petName;
+
+    @ManyToOne
+    @JoinColumn(name ="owner_id")
+    private Owner owner;
+
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     public PetType getPetType() {
@@ -16,20 +30,20 @@ public class Pet extends BaseEntity{
         this.petType = petType;
     }
 
-    public PetOwner getPetOwner() {
-        return petOwner;
+    public Owner getPetOwner() {
+        return owner;
     }
 
-    public void setPetOwner(PetOwner petOwner) {
-        this.petOwner = petOwner;
+    public void setPetOwner(Owner owner) {
+        this.owner = owner;
     }
 
-    public String getPetName() {
-        return petName;
+    public String getName() {
+        return name;
     }
 
-    public void setPetName(String petName) {
-        this.petName = petName;
+    public void setName(String petName) {
+        this.name = petName;
     }
 
     public LocalDate getBirthDate() {
