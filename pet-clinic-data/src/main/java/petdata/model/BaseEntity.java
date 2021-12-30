@@ -9,6 +9,7 @@ import java.io.Serializable;
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
+    //iD value is inherited by all subclasses. Thus, there is no need to set an id property in each POJO
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
