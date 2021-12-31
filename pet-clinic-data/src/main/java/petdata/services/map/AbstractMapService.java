@@ -1,6 +1,6 @@
 package petdata.services.map;
 
-import petdata.model.BaseEntity;
+import petdata.domain.BaseEntity;
 
 import java.util.*;
 

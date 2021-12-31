@@ -1,8 +1,8 @@
 package petdata.services.map;
 
 import org.springframework.context.annotation.Profile;
-import petdata.model.Specialty;
-import petdata.model.Veterinarian;
+import petdata.domain.Specialty;
+import petdata.domain.Veterinarian;
 import org.springframework.stereotype.Service;
 
 import petdata.services.SpecialtyService;

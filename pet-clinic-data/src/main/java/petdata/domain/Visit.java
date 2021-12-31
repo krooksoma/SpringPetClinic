@@ -1,4 +1,4 @@
-package petdata.model;
+package petdata.domain;
 
 import com.sun.istack.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;

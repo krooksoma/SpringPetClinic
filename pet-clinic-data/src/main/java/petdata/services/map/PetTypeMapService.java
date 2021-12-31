@@ -2,7 +2,7 @@ package petdata.services.map;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import petdata.model.PetType;
+import petdata.domain.PetType;
 import petdata.services.PetTypeService;
 
 import java.util.Set;

@@ -1,6 +1,6 @@
 package application.bootstrap;
 
-import petdata.model.*;
+import petdata.domain.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import petdata.services.OwnerService;

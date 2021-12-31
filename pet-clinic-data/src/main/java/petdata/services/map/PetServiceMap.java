@@ -1,9 +1,8 @@
 package petdata.services.map;
 
 import org.springframework.context.annotation.Profile;
-import petdata.model.Pet;
+import petdata.domain.Pet;
 import org.springframework.stereotype.Service;
-import petdata.services.CrudService;
 import petdata.services.PetService;
 
 import java.util.Set;

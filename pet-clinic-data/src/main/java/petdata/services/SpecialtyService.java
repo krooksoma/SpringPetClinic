@@ -1,6 +1,6 @@
 package petdata.services;
 
-import petdata.model.Specialty;
+import petdata.domain.Specialty;
 
 public interface SpecialtyService extends CrudService<Specialty, Long> {
 }

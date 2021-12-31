@@ -1,8 +1,8 @@
 package petdata.services.map;
 
 import org.springframework.context.annotation.Profile;
-import petdata.model.Pet;
-import petdata.model.Owner;
+import petdata.domain.Pet;
+import petdata.domain.Owner;
 import org.springframework.stereotype.Service;
 
 import petdata.services.OwnerService;

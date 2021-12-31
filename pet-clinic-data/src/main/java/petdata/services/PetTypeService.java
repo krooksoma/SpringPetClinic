@@ -1,6 +1,6 @@
 package petdata.services;
 
-import petdata.model.PetType;
+import petdata.domain.PetType;
 
 public interface PetTypeService extends CrudService<PetType, Long>{
 }

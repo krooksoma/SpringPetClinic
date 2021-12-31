@@ -1,4 +1,4 @@
-package petdata.model;
+package petdata.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
