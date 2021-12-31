@@ -5,9 +5,11 @@ import petdata.domain.Specialty;
 import petdata.domain.Veterinarian;
 import org.springframework.stereotype.Service;
 
+import petdata.domain.Visit;
 import petdata.services.SpecialtyService;
 import petdata.services.VeterinarianService;
 
+import java.util.Optional;
 import java.util.Set;
 @Service
 @Profile({"default", "map"})
@@ -24,7 +26,7 @@ public class VeterinarianServiceMap extends AbstractMapService<Veterinarian, Lon
     }
 
     @Override
-    public Veterinarian findById(Long id) {
+    public Optional<Visit> findById(Long id) {
         return super.findById(id);
     }
 

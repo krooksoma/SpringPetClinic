@@ -1,6 +1,7 @@
 package petdata.services.map;
 
 import petdata.domain.BaseEntity;
+import petdata.domain.Visit;
 
 import java.util.*;
 
@@ -12,7 +13,7 @@ public abstract class AbstractMapService<Type extends BaseEntity, ID extends Lon
         return new HashSet<>(map.values());
     }
 
-    Type findById(ID id){
+    Optional<Visit> findById(ID id){
         return map.get(id);
     }
 

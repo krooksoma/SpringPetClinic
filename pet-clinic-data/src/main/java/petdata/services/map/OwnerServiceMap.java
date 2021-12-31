@@ -5,9 +5,12 @@ import petdata.domain.Pet;
 import petdata.domain.Owner;
 import org.springframework.stereotype.Service;
 
+import petdata.domain.Visit;
 import petdata.services.OwnerService;
 import petdata.services.PetService;
 import petdata.services.PetTypeService;
+
+import java.util.Optional;
 import java.util.Set;
 
 
@@ -53,7 +56,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public Owner findById(Long id){
+    public Optional<Visit> findById(Long id){
         return super.findById(id);
     }
 

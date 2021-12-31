@@ -3,8 +3,10 @@ package petdata.services.map;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import petdata.domain.Specialty;
+import petdata.domain.Visit;
 import petdata.services.SpecialtyService;
 
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -31,7 +33,7 @@ public class SpecialtyMapService extends AbstractMapService<Specialty, Long> imp
     }
 
     @Override
-    public Specialty findById(Long id) {
+    public Optional<Visit> findById(Long id) {
         return super.findById(id);
     }
 }
