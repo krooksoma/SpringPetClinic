@@ -1,11 +1,10 @@
 package petdata.services.springdatajpa;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import petdata.domain.Owner;
 import petdata.repositories.OwnerRepository;
-import petdata.repositories.PetRepository;
-import petdata.repositories.PetTypeRepository;
 import petdata.services.OwnerService;
 
 import java.util.HashSet;
@@ -16,15 +15,12 @@ import java.util.Set;
 @Profile("springdatajpa")
 public class OwnerSDJpaService implements OwnerService {
 
-    private final OwnerRepository ownerRepository;
-    private final PetRepository petRepository;
-    private final PetTypeRepository petTypeRepository;
 
-    public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository,
-                             PetTypeRepository petTypeRepository) {
+    private OwnerRepository ownerRepository;
+
+    @Autowired
+    public OwnerSDJpaService(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
-        this.petRepository = petRepository;
-        this.petTypeRepository = petTypeRepository;
     }
 
     @Override
@@ -35,13 +31,16 @@ public class OwnerSDJpaService implements OwnerService {
     }
 
     @Override
-    public Owner findById(Long aLong) {
+    public Optional<Owner> findById(Long aLong) {
 //        Optional<Owner> optionalOwner =  ownerRepository.findById(aLong);
-        return ownerRepository.findById(aLong).orElse(null);
+        return ownerRepository.findById(aLong);
     }
 
     @Override
     public Owner save(Owner object) {
+        System.out.println("###################");
+        System.out.println("ownerRepository save method called");
+        System.out.println("###################");
         return ownerRepository.save(object);
     }
 

@@ -1,81 +1,53 @@
 package petdata.services.springdatajpa;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import petdata.domain.Visit;
 import petdata.repositories.VisitRepository;
 import petdata.services.VisitService;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
 public class VisitSDJpaService implements VisitService{
 
-    private final VisitRepository visitRepository;
+    private VisitRepository visitRepository;
 
+    @Autowired
     public VisitSDJpaService(VisitRepository visitRepository) {
         this.visitRepository = visitRepository;
     }
 
-    @Override
-    public <S extends Visit> S save(S entity) {
-        return null;
-    }
 
     @Override
-    public <S extends Visit> Iterable<S> saveAll(Iterable<S> entities) {
-        return null;
+    public Set<Visit> findAll() {
+        Set<Visit> visitSet = new HashSet<>();
+        visitRepository.findAll().forEach(visitSet::add);
+        return visitSet;
     }
 
     @Override
     public Optional<Visit> findById(Long aLong) {
-        return Optional.empty();
+        return visitRepository.findById(aLong);
     }
 
     @Override
-    public boolean existsById(Long aLong) {
-        return false;
+    public Visit save(Visit object) {
+        return visitRepository.save(object);
     }
 
     @Override
-    public Iterable<Visit> findAll() {
-        return null;
-    }
-
-    @Override
-    public Iterable<Visit> findAllById(Iterable<Long> longs) {
-        return null;
-    }
-
-    @Override
-    public long count() {
-        return 0;
+    public void delete(Visit object) {
+        visitRepository.delete(object);
     }
 
     @Override
     public void deleteById(Long aLong) {
-
-    }
-
-    @Override
-    public void delete(Visit entity) {
-
-    }
-
-    @Override
-    public void deleteAllById(Iterable<? extends Long> longs) {
-
-    }
-
-    @Override
-    public void deleteAll(Iterable<? extends Visit> entities) {
-
-    }
-
-    @Override
-    public void deleteAll() {
-
+        visitRepository.deleteById(aLong);
     }
 }

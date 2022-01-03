@@ -1,11 +1,19 @@
 package petdata.domain;
 
 import com.sun.istack.NotNull;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
+
+@NoArgsConstructor
+@Setter
+@Getter
 @Entity
 @Table(name="visits")
 public class Visit extends BaseEntity {

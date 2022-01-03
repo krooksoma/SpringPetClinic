@@ -1,9 +1,11 @@
 package petdata.services.springdatajpa;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import petdata.domain.Pet;
+import petdata.domain.Visit;
 import petdata.repositories.PetRepository;
 import petdata.services.PetService;
 
@@ -15,11 +17,12 @@ import java.util.Set;
 @Profile("springdatajpa")
 public class PetSDJpaService implements PetService {
 
+    private PetRepository petRepository;
+
+    @Autowired
     public PetSDJpaService(PetRepository petRepository) {
         this.petRepository = petRepository;
     }
-
-    private final PetRepository petRepository;
 
     @Override
     public Set<Pet> findAll() {
@@ -29,9 +32,8 @@ public class PetSDJpaService implements PetService {
     }
 
     @Override
-    public Pet findById(Long aLong) {
-//        Optional<Pet> petOptional = petRepository.findById(aLong);
-        return petRepository.findById(aLong).orElse(null);
+    public Optional<Pet> findById(Long aLong) {
+        return petRepository.findById(aLong);
     }
 
     @Override

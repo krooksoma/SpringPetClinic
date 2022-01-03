@@ -1,20 +1,24 @@
 package petdata.services.springdatajpa;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import petdata.domain.PetType;
+import petdata.domain.Visit;
 import petdata.repositories.PetTypeRepository;
 import petdata.services.PetTypeService;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
 public class PetTypeSDJpaService implements PetTypeService {
 
-    private final PetTypeRepository petTypeRepository;
+    private PetTypeRepository petTypeRepository;
 
+    @Autowired
     public PetTypeSDJpaService(PetTypeRepository petTypeRepository) {
         this.petTypeRepository = petTypeRepository;
     }
@@ -27,8 +31,8 @@ public class PetTypeSDJpaService implements PetTypeService {
     }
 
     @Override
-    public PetType findById(Long aLong) {
-        return petTypeRepository.findById(aLong).orElse(null);
+    public Optional<PetType> findById(Long aLong) {
+        return petTypeRepository.findById(aLong);
     }
 
     @Override
